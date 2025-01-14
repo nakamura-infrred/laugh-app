@@ -38,6 +38,12 @@ The app is created as a lightweight and straightforward implementation to evalua
 
 This project uses Firebase to manage a click counter. Since this is a public repository, default Firebase settings are included. **However, if you fork this repository, it is mandatory to replace these settings with your own Firebase project configuration** to ensure the functionality of your own counter.
 
+### Important Note on API Key Exposure
+
+The Firebase API key included in this project is intentionally exposed because it is required for client-side integration. Firebase handles API key exposure securely, and the key itself cannot be used to gain unauthorized access to your Firebase project as long as proper security rules are implemented.
+
+If you fork this project, you must create your own Firebase project and replace the `firebaseConfig` object with your unique settings. This ensures that your counter is isolated and operates independently.
+
 ### How to Configure Firebase
 
 1. Visit [Firebase Console](https://console.firebase.google.com/) and create a new project.
@@ -71,6 +77,11 @@ const firebaseConfig = {
 ### 日本語
 
 このプロジェクトでは、クリックカウンターを管理するためにFirebaseを使用しています。このリポジトリは公開されているため、デフォルトのFirebase設定が含まれています。**ただし、このリポジトリをフォークする場合は、独自のFirebaseプロジェクト設定に置き換えることが必須です。** これにより、独自のカウンター機能が正常に動作します。
+
+### APIキー公開に関する重要な注意事項
+本プロジェクトに含まれるFirebase APIキーは、クライアントサイド統合に必要なため意図的に公開されています。FirebaseはAPIキーの公開に対してセキュアな対策を取っており、適切なセキュリティルールを設定していれば、APIキーを利用した不正アクセスは防げます。
+
+このリポジトリをフォークする場合は、必ず独自のFirebaseプロジェクトを作成し、`firebaseConfig`オブジェクトを独自の設定に置き換えてください。これにより、カウンターが独立して正常に動作します。
 
 ### Firebase設定手順
 
