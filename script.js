@@ -8,8 +8,7 @@ playButton.addEventListener('click', () => {
         'sounds/laugh4.mp3',
         'sounds/laugh5.mp3',
         'sounds/laugh6.mp3',
-        'sounds/laugh7.mp3',
-        'sounds/laugh8.mp3'
+        'sounds/laugh7.mp3'
     ];
     const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
     const audio = new Audio(randomSound);
