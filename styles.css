@@ -32,13 +32,14 @@ h1 {
     padding: 0;
     display: inline-block;
     margin: 20px auto;
-    width: 80%;
-    max-width: 300px;
+    width: 100%; /* 幅を100%に設定 */
+    max-width: 300px; /* 最大幅を300pxに制限 */
     text-align: center;
 }
 
 .icon-button img {
-    width: 100%;
+    width: 100%; /* アイコンを親ボタンの幅に合わせる */
+    max-width: 300px; /* 最大幅を制限 */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -67,6 +68,9 @@ h1 {
         font-size: 14px;
     }
     .icon-button {
-        width: 70%;
+        width: 90%; /* 小さい画面で幅を90%に */
+    }
+    .icon-button img {
+        max-width: 250px; /* 小さい画面で最大幅を250pxに制限 */
     }
 }
