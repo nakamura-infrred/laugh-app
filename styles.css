@@ -4,7 +4,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 /* コンテナ */
@@ -13,20 +13,24 @@ body {
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* ヘッダー */
 h1 {
-    font-size: 36px;
+    font-size: 24px;
     color: #d35400;
+    margin-bottom: 20px;
 }
 
 /* アイコンのスタイル */
 .icon {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 80%; /* スマートフォンに対応 */
+    max-width: 300px; /* 最大サイズを設定 */
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
     animation: float 2s infinite ease-in-out;
 }
 
@@ -39,31 +43,12 @@ h1 {
     }
 }
 
-/* ボタンのスタイル */
-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-    animation: flash 0.3s;
-}
-
-@keyframes flash {
-    0% { background-color: #ff6f61; }
-    50% { background-color: #ffb6b6; }
-    100% { background-color: #ff6f61; }
+/* レスポンシブ対応 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    .icon {
+        width: 70%; /* さらに小さい画面で調整 */
+    }
 }
