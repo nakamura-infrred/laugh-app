@@ -74,3 +74,23 @@ h1 {
         max-width: 250px; /* 小さい画面で最大幅を250pxに制限 */
     }
 }
+
+/* カウンター表示のスタイル */
+.counter-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff9800;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #ff9800, 0 0 20px #ffa726;
+    animation: glow 2s infinite alternate;
+}
+
+/* アニメーション効果 */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff9800, 0 0 20px #ffa726;
+    }
+    to {
+        text-shadow: 0 0 20px #ff9800, 0 0 30px #ffcc80;
+    }
+}
