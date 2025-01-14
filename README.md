@@ -10,6 +10,42 @@ The app is created as a lightweight and straightforward implementation to evalua
 
 軽量かつ簡易な構成で実装されており、将来的なインタラクティブ機能の追加やユーザーの反応を評価することを目的としています。ぜひお試しいただき、ご意見をお寄せください！
 
+## Firebase設定について
+
+このプロジェクトでは、Firebaseを使用してクリックカウンターを管理しています。
+公開リポジトリであるため、デフォルトのFirebase設定が含まれていますが、フォークしたプロジェクトでは、独自のFirebase設定に変更する必要があります。
+
+### Firebase設定を変更する手順
+
+1. [Firebase Console](https://console.firebase.google.com/)にアクセスし、新しいプロジェクトを作成します。
+2. 作成したプロジェクトの「設定」セクションから、以下の情報を取得します:
+   - APIキー (`apiKey`)
+   - 認証ドメイン (`authDomain`)
+   - データベースURL (`databaseURL`)
+   - プロジェクトID (`projectId`)
+   - ストレージバケット (`storageBucket`)
+   - メッセージング送信者ID (`messagingSenderId`)
+   - アプリID (`appId`)
+   - 測定ID (`measurementId`)
+3. `script.js`内の`firebaseConfig`を取得した情報に置き換えます。
+
+### セキュリティについて
+
+- Firebaseのセキュリティルールを適切に設定することで、不正なデータアクセスを防止できます。
+- 推奨されるセキュリティルール:
+  ```json
+    {
+        "rules": {
+            "counter": {
+            ".read": true,
+            ".write": "newData.isNumber() && newData.val() >= data.val() && (data.child('lastUpdate').val() === null || now > data.child('lastUpdate').val() + 5000)"
+            },
+            "lastUpdate": {
+            ".validate": "newData.isNumber() && newData.val() <= now"
+            }
+        }
+    }
+
 ## Changelog
 
 ### v2.0

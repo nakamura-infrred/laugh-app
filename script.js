@@ -1,6 +1,25 @@
+/**
+ * Firebase Configuration
+ * 
+ * このAPIキーは現在のプロジェクト専用です。フォークする場合は、自分のFirebaseプロジェクトを作成し、
+ * 以下の設定を独自の値に変更してください。
+ * 
+ * 1. Firebase Consoleにアクセスし、新しいプロジェクトを作成します。
+ * 2. プロジェクト設定から以下の情報を取得してください:
+ *    - apiKey
+ *    - authDomain
+ *    - databaseURL
+ *    - projectId
+ *    - storageBucket
+ *    - messagingSenderId
+ *    - appId
+ *    - measurementId
+ * 3. このスクリプト内のfirebaseConfigを更新します。
+ */
+
 // Firebase設定
 const firebaseConfig = {
-    apiKey: "AIzaSyApLmc-Hx9dOIxvkXLj-bRb4g-ICS-3mx0",
+    apiKey: "AIzaSyApLmc-Hx9dOIxvkXLj-bRb4g-ICS-3mx0", // ←独自のAPIキーに変更
     authDomain: "laugh-counter.firebaseapp.com",
     databaseURL: "https://laugh-counter-default-rtdb.firebaseio.com",
     projectId: "laugh-counter",
