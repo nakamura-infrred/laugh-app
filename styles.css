@@ -1,25 +1,69 @@
+/* 全体のスタイル */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #ffe599;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
 }
 
+/* コンテナ */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* ヘッダー */
 h1 {
-    color: #333;
+    font-size: 36px;
+    color: #d35400;
 }
 
+/* アイコンのスタイル */
+.icon {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ボタンのスタイル */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #ff6f61;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    animation: flash 0.3s;
+}
+
+@keyframes flash {
+    0% { background-color: #ff6f61; }
+    50% { background-color: #ffb6b6; }
+    100% { background-color: #ff6f61; }
 }
