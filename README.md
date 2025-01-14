@@ -10,3 +10,9 @@ The app is created as a lightweight and straightforward implementation to evalua
 
 軽量かつ簡易な構成で実装されており、将来的なインタラクティブ機能の追加やユーザーの反応を評価することを目的としています。ぜひお試しいただき、ご意見をお寄せください！
 
+## Credits / クレジット
+
+### Sound Materials / 音声素材について
+This application uses free sound materials from [Sound Effect Lab](https://soundeffect-lab.info/).
+
+本アプリケーションでは、[効果音ラボ](https://soundeffect-lab.info/)のフリー音声素材を利用しています。
