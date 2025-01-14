@@ -6,6 +6,11 @@
     <title>笑い袋アプリ</title>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- faviconの無効化または修正 -->
+    <link rel="icon" href="data:,">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,6 +19,7 @@
             <img src="laughing-bag-icon.png" alt="Laughing Bag Icon">
         </button>
         <p class="instruction">アイコンを押してね！</p>
+        <p class="counter-text">全体のクリック数: <span id="counter">0</span></p>
     </div>
 
     <!-- 注釈を表示 -->
