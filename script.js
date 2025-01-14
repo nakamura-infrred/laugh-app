@@ -1,4 +1,4 @@
-const playButton = document.getElementById('play-button');
+const playButton = document.getElementById('play-icon');
 
 playButton.addEventListener('click', () => {
     const sounds = [

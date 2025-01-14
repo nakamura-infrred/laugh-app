@@ -24,23 +24,38 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* アイコンのスタイル */
-.icon {
-    width: 80%; /* スマートフォンに対応 */
-    max-width: 300px; /* 最大サイズを設定 */
-    margin: 0 auto;
-    display: block;
+/* ボタンとしてのアイコン */
+.icon-button {
+    background: none;
+    border: none;
     cursor: pointer;
-    animation: float 2s infinite ease-in-out;
+    padding: 0;
+    display: inline-block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.icon-button img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent; /* タッチハイライトを無効化 */
+}
+
+/* クリック・タッチ時のエフェクト */
+.icon-button img:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 説明文のスタイル */
+.instruction {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
 }
 
 /* レスポンシブ対応 */
@@ -48,7 +63,10 @@ h1 {
     h1 {
         font-size: 20px;
     }
-    .icon {
-        width: 70%; /* さらに小さい画面で調整 */
+    .instruction {
+        font-size: 14px;
+    }
+    .icon-button {
+        width: 70%;
     }
 }
