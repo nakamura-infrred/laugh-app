@@ -10,6 +10,28 @@ The app is created as a lightweight and straightforward implementation to evalua
 
 軽量かつ簡易な構成で実装されており、将来的なインタラクティブ機能の追加やユーザーの反応を評価することを目的としています。ぜひお試しいただき、ご意見をお寄せください！
 
+## Changelog
+
+### v2.0
+- Added a counter feature to the Laughing Bag App.
+  - Displays the message: "Spread XXX moments of health and peace through laughter!"
+  - Shows the total click count in real-time.
+  - Counts clicks locally and syncs with the server periodically.
+  - Uses Firebase to store the count.
+- Improved responsive design for better usability on smartphones.
+- Enhanced the random laughter playback feature.
+
+## 変更履歴
+
+### v2.0
+- 笑い袋アプリにカウンター機能を追加。
+  - 「笑いの力で XXX回分の健康と平和を届けました！」というメッセージを表示。
+  - 全体のクリック数をリアルタイムで表示。
+  - ローカルでクリックをカウントし、定期的にサーバーに同期。
+  - Firebaseを利用してカウントを保存。
+- レスポンシブデザインを改善し、スマートフォンでも快適に利用可能。
+- 笑い声のランダム再生機能を強化。
+
 ## Credits / クレジット
 
 ### Sound Materials / 音声素材について
