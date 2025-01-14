@@ -77,20 +77,28 @@ h1 {
 
 /* カウンター表示のスタイル */
 .counter-text {
-    font-size: 1.8em;
+    font-size: 2em; /* フォントサイズを大きく調整 */
     font-weight: bold;
     color: #ff9800;
     margin-top: 20px;
-    text-shadow: 0 0 10px #ff9800, 0 0 20px #ffa726;
+    text-shadow: 0 0 15px #ff9800, 0 0 30px #ffa726; /* より明るく目立たせる */
     animation: glow 2s infinite alternate;
 }
 
 /* アニメーション効果 */
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #ff9800, 0 0 20px #ffa726;
+        text-shadow: 0 0 15px #ff9800, 0 0 25px #ffa726;
     }
     to {
-        text-shadow: 0 0 20px #ff9800, 0 0 30px #ffcc80;
+        text-shadow: 0 0 25px #ff9800, 0 0 35px #ffcc80;
+    }
+}
+
+/* モバイルデバイスでのカウンター表示 */
+@media screen and (max-width: 480px) {
+    .counter-text {
+        font-size: 1.5em; /* モバイルでのフォントサイズを調整 */
+        margin-top: 15px;
     }
 }

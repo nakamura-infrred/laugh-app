@@ -33,7 +33,7 @@ function fetchAndDisplayCounter() {
 
 // ローカルカウントとグローバルカウントを表示更新
 function updateDisplay() {
-    counterElem.textContent = `笑いの力で ${globalCount + localCount} 回分の健康と平和を届けました！`;
+    counterElem.textContent = `笑いの力で ${globalCount + localCount} 回分の健康と平和を世界中に届けました！`;
 }
 
 // クリックをバッファリングしてサーバーに送信
